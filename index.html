@@ -1,0 +1,224 @@
+<html><head><base href="https://www.meusite.com/"><meta charset="UTF-8">  <title>Casa & Cozinha - Seu Lar Mais Saboroso</title>
+<style>
+:root {
+  --primary: #ff6b6b;
+  --secondary: #4ecdc4;
+  --dark: #2d3436;
+  --light: #f9f9f9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: var(--light);
+}
+
+header {
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: var(--primary);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.cart-icon {
+  position: relative;
+  cursor: pointer;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--primary);
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
+.hero {
+  margin-top: 80px;
+  background: var(--primary);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.products {
+  max-width: 1200px;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.product-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-info {
+  padding: 1rem;
+}
+
+.product-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-price {
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  background: #ff5252;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.cart-icon:hover svg {
+  animation: bounce 1s infinite;
+}
+</style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <div class="logo">Casa & Cozinha</div>
+      <div class="cart-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 20a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-7-4h7a1 1 0 0 0 .962-.725l3-10A1 1 0 0 0 19 4H5.074L4.18 1.243A1 1 0 0 0 3.222 1H1"></path>
+        </svg>
+        <span class="cart-count">0</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Transforme Sua Cozinha</h1>
+    <p>Produtos de qualidade para fazer suas receitas favoritas</p>
+  </section>
+
+  <main class="products">
+    <div class="product-card">
+      <div class="product-image">
+        <svg width="100" height="100" viewBox="0 0 24 24" fill="var(--primary)">
+          <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+        </svg>
+      </div>
+      <div class="product-info">
+        <h3 class="product-title">Conjunto de Panelas Antiaderentes</h3>
+        <p class="product-price">R$ 399,90</p>
+        <button class="btn">Adicionar ao Carrinho</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-image">
+        <svg width="100" height="100" viewBox="0 0 24 24" fill="var(--primary)">
+          <path d="M18 4V3c0-.55-.45-1-1-1H7c-.55 0-1 .45-1 1v1H3v6c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V4h-3zm-2 0H8V4h8v.5zm2 6H6V6h12v4z"/>
+        </svg>
+      </div>
+      <div class="product-info">
+        <h3 class="product-title">Liquidificador Profissional</h3>
+        <p class="product-price">R$ 199,90</p>
+        <button class="btn">Adicionar ao Carrinho</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-image">
+        <svg width="100" height="100" viewBox="0 0 24 24" fill="var(--primary)">
+          <path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"/>
+        </svg>
+      </div>
+      <div class="product-info">
+        <h3 class="product-title">Conjunto de Talheres Inox</h3>
+        <p class="product-price">R$ 149,90</p>
+        <button class="btn">Adicionar ao Carrinho</button>
+      </div>
+    </div>
+  </main>
+
+<script>
+let cartCount = 0;
+const cartCountElement = document.querySelector('.cart-count');
+const buttons = document.querySelectorAll('.btn');
+
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    cartCount++;
+    cartCountElement.textContent = cartCount;
+    
+    button.textContent = 'Adicionado!';
+    button.style.background = 'var(--secondary)';
+    
+    setTimeout(() => {
+      button.textContent = 'Adicionar ao Carrinho';
+      button.style.background = 'var(--primary)';
+    }, 1000);
+  });
+});
+</script>
+
+</body></html>
